@@ -1,0 +1,19 @@
+# Patent Valuation 
+# CF is the expected Cash Flow for a given time period;
+# r is the Discount Rate, or, more often, the Weighted Average Cost of Capital (WACC); and
+# n is the number of terms, based on the remaining amount of time the investment/patent will be active.
+import math
+
+CF = 800000
+r = 0.05
+n = 20
+total = 0
+for x in range(0,21): 
+    result = (CF/((1+r)**x))
+    total = total + result
+    CF = CF+200000 # If sales go up by 200,000 a year
+    print(CF/((1+r)**x))
+
+total="${:,.2f}".format(total)
+print("\n")
+print(total)
