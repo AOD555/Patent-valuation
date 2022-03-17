@@ -19,6 +19,6 @@ for x in range(0,21):
 
 total="${:,.2f}".format(total)
 print("\n")
-print(total)
+print("Patent is roughly worth "+ total)
 
 print("SHEEEEESH")
