@@ -14,7 +14,7 @@ for x in range(0,21):
     total = total + result
     yearly = CF/((1+r)**x)
     yearly = "${:,.2f}".format(yearly)
-    print(yearly)
+    print("Year", str(x)+" " + yearly)
     CF = CF+200000 # If sales go up by 200,000 a year
 
 total="${:,.2f}".format(total)
