@@ -8,12 +8,17 @@ CF = 800000
 r = 0.05
 n = 20
 total = 0
+yearly = 0
 for x in range(0,21): 
     result = (CF/((1+r)**x))
     total = total + result
+    yearly = CF/((1+r)**x)
+    yearly = "${:,.2f}".format(yearly)
+    print(yearly)
     CF = CF+200000 # If sales go up by 200,000 a year
-    print(CF/((1+r)**x))
 
 total="${:,.2f}".format(total)
 print("\n")
 print(total)
+
+print("SHEEEEESH")
